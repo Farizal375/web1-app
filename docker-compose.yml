@@ -1,0 +1,12 @@
+services:
+  web1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_NAME: "Web Alpha"
+        VITE_THEME_COLOR: "#00f0ff"
+    container_name: web1
+    ports:
+      - "8080:80"
+    restart: unless-stopped
